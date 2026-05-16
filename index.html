@@ -12,6 +12,7 @@ body {
   display: flex;
 }
 
+/* LEFT SIDE */
 .sidebar {
   width: 33%;
   background: #f4f4f4;
@@ -25,27 +26,27 @@ body {
   border-radius: 10px;
 }
 
+/* RIGHT SIDE */
 .content {
   width: 67%;
   padding: 40px;
 }
 
-
 .section-title {
   font-weight: bold;
   font-size: 20px;
-  margin-top: 50px;   
-  margin-bottom: 20px; 
+  margin-top: 70px;   /* space ABOVE section */
+  margin-bottom: 25px; /* space BELOW */
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
-  margin-bottom: 40px;  
+  margin-bottom: 60px;  /* space AFTER each section */
 }
 
-
+/* CARD */
 .card {
   perspective: 1000px;
 }
@@ -64,6 +65,8 @@ body {
 
 .card-front, .card-back {
   position: absolute;
+  top: 0;     /* REQUIRED */
+  left: 0;    /* REQUIRED */
   width: 100%;
   height: 100%;
   border: 1px solid #ccc;
@@ -72,12 +75,14 @@ body {
   backface-visibility: hidden;
 }
 
+/* IMAGE */
 .card-front img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+/* BACK */
 .card-back {
   background: white;
   transform: rotateY(180deg);
@@ -87,6 +92,7 @@ body {
   overflow-y: auto;
 }
 
+/* BADGES */
 .badge {
   display: inline-block;
   padding: 3px 8px;
@@ -127,9 +133,9 @@ body {
 
 <!-- SECTION 1 -->
 <div class="section-title">Migration, Informal Economy, and Urbanisation in China</div>
+
 <div class="grid">
 
-<!-- CARD 1 -->
 <div class="card"><div class="card-inner">
 <div class="card-front"><img src="images/Nightmarket.jpg"></div>
 <div class="card-back">
@@ -140,7 +146,6 @@ This doctoral thesis takes you into a night market on the edge of Nanjing to exp
 </div>
 </div></div>
 
-<!-- CARD 2 -->
 <div class="card"><div class="card-inner">
 <div class="card-front"><img src="images/Sourceofmigrants.png"></div>
 <div class="card-back">
@@ -151,43 +156,42 @@ This article examines the hidden side of China’s rapid urbanisation by focusin
 </div>
 </div></div>
 
-<!-- CARD 3 (NOW RURAL URBANISATION BOOK) -->
-
 <div class="card">
-  <div class="card-inner">
+<div class="card-inner">
 
-    <div class="card-front">
-      <img src="images/TransFromVillageToCity.png" alt="Translation works">
-    </div>
-
-    <div class="card-back">
-      <div class="badge book">Book Translations</div>
-
-      <p>
-        <b>From Village to City</b><br>
-        Andrew Kipnis, <i>From Village to City: Social Transformation in a Chinese County Seat</i>. 
-        Translated by Liang Chen and M. Bai. 
-        Taipei: Taiwan National University Press, 2021.
-      </p>
-
-      <p>
-        <b>Revisiting China’s Rural Urbanisation</b><br>
-        Daming Zhou, <i>Revisiting China’s Rural Urbanisation: A Pearl River Delta Region Perspective</i>. 
-        Translated by Liang Chen. 
-        London: Routledge, 2021.
-      </p>
-
-    </div>
-
-  </div>
+<div class="card-front">
+<img src="images/TransFromVillageToCity.png">
 </div>
 
+<div class="card-back">
+<div class="badge book">Book Translations</div>
+
+<p>
+<b>From Village to City</b><br>
+Andrew Kipnis, <i>From Village to City: Social Transformation in a Chinese County Seat</i>. 
+Translated by Liang Chen and M. Bai. 
+Taipei: Taiwan National University Press, 2021.
+</p>
+
+<p>
+<b>Revisiting China’s Rural Urbanisation</b><br>
+Daming Zhou, <i>Revisiting China’s Rural Urbanisation: A Pearl River Delta Region Perspective</i>. 
+Translated by Liang Chen. 
+London: Routledge, 2021.
+</p>
+
+</div>
+
+</div>
+</div>
+
+</div>
 
 <!-- SECTION 2 -->
-<div class="section-title">Chinese and Africans on the Move </div>
+<div class="section-title">Chinese and Africans on the Move</div>
+
 <div class="grid">
 
-<!-- CARD 4 (TECH TRANSFER) -->
 <div class="card"><div class="card-inner">
 <div class="card-front"><img src="images/CBEbuilding.jpg"></div>
 <div class="card-back">
@@ -197,7 +201,6 @@ This study examines Chinese investment in Ethiopia and whether it supports indus
 </div>
 </div></div>
 
-<!-- CARD 5 (BOTSWANA WORKERS) -->
 <div class="card"><div class="card-inner">
 <div class="card-front"><img src="images/BotswanaWorkers.jpg"></div>
 <div class="card-back">
@@ -208,9 +211,8 @@ This article explores the everyday interactions between Chinese employers and lo
 </div>
 </div></div>
 
-<!-- CARD 6 (GUANGZHOU AFRICANS) -->
 <div class="card"><div class="card-inner">
-<div class="card-front"><img src=images/NigerianFood.jpg></div>
+<div class="card-front"><img src="images/NigerianFood.jpg"></div>
 <div class="card-back">
 <div class="badge essay">Public Essay</div>
 <p><b>Governing Strangers in Guangzhou </b><br>
@@ -222,10 +224,10 @@ Focusing on African migrants in Guangzhou, this article examines how cities mana
 </div>
 
 <!-- SECTION 3 -->
-<div class="section-title">Glocalisation in Africa: Materiality and Cultural Change </div>
+<div class="section-title">Glocalisation in Africa: Materiality and Cultural Change</div>
+
 <div class="grid">
 
-<!-- CARD 7 (BOTSWANA UNIVERSITY) -->
 <div class="card"><div class="card-inner">
 <div class="card-front"><img src="images/GewaneSunrise.jpeg"></div>
 <div class="card-back">
@@ -235,7 +237,6 @@ This chapter investigates university strikes in Botswana during COVID‑19. It s
 </div>
 </div></div>
 
-<!-- CARD 8 (MUSEUM) -->
 <div class="card"><div class="card-inner">
 <div class="card-front"><img src="images/KhutoPerformance.png"></div>
 <div class="card-back">
@@ -245,7 +246,6 @@ This article examines how museum practices in Botswana can be shaped by indigeno
 </div>
 </div></div>
 
-<!-- CARD 9 (AFAR) -->
 <div class="card"><div class="card-inner">
 <div class="card-front"><img src="images/GewaneSunrise.jpeg"></div>
 <div class="card-back">
