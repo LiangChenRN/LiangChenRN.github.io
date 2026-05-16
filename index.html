@@ -8,45 +8,64 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
   display: flex;
+  font-family: Arial, sans-serif;
 }
 
-/* LEFT SIDE */
+/* ===== LEFT SIDE ===== */
 .sidebar {
   width: 33%;
   background: #f4f4f4;
-  padding: 30px;
-  text-align: center;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  font-family: Garamond, "Times New Roman", serif;
 }
 
+/* image centered */
 .sidebar img {
   width: 66%;
   max-width: 220px;
+  display: block;
+  margin: 0 auto 20px auto;
   border-radius: 10px;
 }
 
-/* RIGHT SIDE */
+/* name centered */
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar p {
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
 .content {
   width: 67%;
   padding: 40px;
+  box-sizing: border-box;
 }
 
+/* SECTION TITLES */
 .section-title {
   font-weight: bold;
   font-size: 20px;
-  margin-top: 70px;   /* space ABOVE section */
-  margin-bottom: 25px; /* space BELOW */
+  margin-top: 70px;
+  margin-bottom: 25px;
 }
 
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
-  margin-bottom: 60px;  /* space AFTER each section */
+  margin-bottom: 60px;
 }
 
-/* CARD */
+/* ===== CARDS ===== */
 .card {
   perspective: 1000px;
 }
@@ -65,8 +84,8 @@ body {
 
 .card-front, .card-back {
   position: absolute;
-  top: 0;     /* REQUIRED */
-  left: 0;    /* REQUIRED */
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   border: 1px solid #ccc;
@@ -75,14 +94,12 @@ body {
   backface-visibility: hidden;
 }
 
-/* IMAGE */
 .card-front img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* BACK */
 .card-back {
   background: white;
   transform: rotateY(180deg);
@@ -129,17 +146,21 @@ body {
   <p>
     I am an anthropologist, author, and father of a four-year-old daughter.
   </p>
+
   <p>
     My research began with China’s domestic migration during my PhD at the Australian National University, and has since expanded to examine China’s engagements with the Global South.
   </p>
+
   <p>
     My teaching and research have taken me across China, Australia, Ethiopia, and Botswana. Through this experience, I bring together local ethnographic insights with broader global processes.
   </p>
+
   <p>
     On this website, my work is organised around three interconnected themes. I invite you to explore them through the sections on the right.
   </p>
 
 </div>
+
 
 <!-- SECTION 1 -->
 <div class="section-title">Migration, Informal Economy, and Urbanisation in China</div>
