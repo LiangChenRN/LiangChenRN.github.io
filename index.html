@@ -1,74 +1,108 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <title>Liang Chen</title>
+
   <style>
     body {
       margin: 0;
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       display: flex;
+      height: 100vh;
     }
 
+    /* LEFT PANEL */
     .sidebar {
-      width: 250px;
+      width: 33%;
       background: #f4f4f4;
-      padding: 20px;
-      height: 100vh;
+      padding: 30px;
+      box-sizing: border-box;
     }
 
     .sidebar img {
       width: 100%;
       border-radius: 10px;
+      margin-bottom: 20px;
     }
 
+    .sidebar h2 {
+      margin: 5px 0;
+    }
+
+    .sidebar p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .sidebar ul {
+      margin-top: 20px;
+    }
+
+    .sidebar li {
+      margin: 8px 0;
+    }
+
+    /* RIGHT PANEL */
     .content {
-      flex: 1;
+      width: 67%;
       padding: 40px;
+      box-sizing: border-box;
+
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
     }
 
+    /* CARD */
     .card {
       perspective: 1000px;
     }
 
-
-  .card-inner {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
+    .card-inner {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3; /* keeps proportions */
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
     }
 
     .card:hover .card-inner {
       transform: rotateY(180deg);
     }
 
-
-  .card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
-    border: 1px solid #ccc;
-    padding: 0;
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      backface-visibility: hidden;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
     }
 
-
-.card-front img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    .card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
     .card-back {
       background: white;
       transform: rotateY(180deg);
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 14px;
     }
+
+    .card-back a {
+      display: inline-block;
+      margin-top: 10px;
+      color: blue;
+    }
+
   </style>
 </head>
 
@@ -76,40 +110,106 @@
 
   <!-- LEFT SIDE -->
   <div class="sidebar">
-   <img src="images/ClanLeaderAndAuthor.jpeg">
 
-    <p><strong>Liang Chen</strong><br>Anthropology Researcher</p>
+    <img src="images/ChenLiangLib.jpeg">
 
-    <p>Navigation:</p>
+    <h2>Liang Chen</h2>
+    <p>Anthropology Researcher focusing on China–Africa relations,
+    migration, and technology transfer.</p>
+
+    <h3>Navigation</h3>
     <ul>
-      <li>Home</li>
-      <li><a href="research.html">Research</a></li>
+      Home
+      research.html
       <li>Publications</li>
     </ul>
+
   </div>
 
   <!-- RIGHT SIDE -->
   <div class="content">
+
+    <!-- CARD 1 -->
     <div class="card">
       <div class="card-inner">
         <div class="card-front">
           <img src="images/GewaneSunrise.jpeg">
         </div>
         <div class="card-back">
-          <p>Short description here.</p>
-          <a href="research.html">Read more</a>
+          <p><b>Urban Migrants in China</b><br>
+          Study of informal economies and migrant survival strategies
+          in urbanising China.</p>
+          https://doi.org/xxxxx.xxxxxx">View Article</a>
         </div>
       </div>
     </div>
 
+    <!-- CARD 2 -->
     <div class="card">
       <div class="card-inner">
         <div class="card-front">
-          <p>Project 2</p>
+          <img src="images/ChenLiangLib.jpeg">
         </div>
         <div class="card-back">
-          <p>Short description here.</p>
-          <a href="research.html">Read more</a>
+          <p><b>Technology Transfer</b><br>
+          Analysis of Chinese industrial knowledge transfer in Ethiopia.</p>
+          #">View Article</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="images/GewaneSunrise.jpeg">
+        </div>
+        <div class="card-back">
+          <p><b>China–Africa Migration</b><br>
+          Social dynamics of cross-border labour and capital.</p>
+          #">View Article</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="images/ChenLiangLib.jpeg">
+        </div>
+        <div class="card-back">
+          <p><b>Botswana Cultural Heritage</b><br>
+          Youth, tradition, and museum practice transformations.</p>
+          #">View Article</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="images/GewaneSunrise.jpeg">
+        </div>
+        <div class="card-back">
+          <p><b>Aksumite Civilisation</b><br>
+          Historical transformation of African states and societies.</p>
+          #">View Chapter</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="images/ChenLiangLib.jpeg">
+        </div>
+        <div class="card-back">
+          <p><b>Public Anthropology</b><br>
+          Media writings on migration, health politics, and global change.</p>
+          #">Read More</a>
         </div>
       </div>
     </div>
