@@ -21,8 +21,206 @@
       text-align: center;
     }
 
-    /* ✅ PROFILE IMAGE (2/3 SIZE, CENTERED) */
+    /* ✅ PROFILE IMAGE (fixed: 2/3 size + centered) */
     .sidebar img {
       width: 66%;
       max-width: 220px;
-      display: block
+      display: block;
+      margin: 0 auto 20px auto;
+      border-radius: 10px;
+    }
+
+    .sidebar h2 {
+      margin: 10px 0;
+    }
+
+    .sidebar p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .sidebar ul {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .sidebar li {
+      margin: 8px 0;
+    }
+
+    /* RIGHT PANEL */
+    .content {
+      width: 67%;
+      padding: 40px;
+      box-sizing: border-box;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    /* CARD */
+    .card {
+      perspective: 1000px;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      backface-visibility: hidden;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-back {
+      background: white;
+      transform: rotateY(180deg);
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    .card-back a {
+      display: inline-block;
+      margin-top: 10px;
+      color: blue;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- LEFT SIDE -->
+  <div class="sidebar">
+
+    <img src="images/ChenLiangLib.jpeg" alt="Profile photo">
+
+    <h2>Dr Liang Chen</h2>
+    <p>
+      Anthropologist focusing on globalisation, transnationalism,
+      migration, and urbanisation, with interests in China–Africa relations.
+    </p>
+
+    <h3>Navigation</h3>
+    <ul>
+      <li>Home</li>
+      <li><a href="research.html">Research</a></li>
+      <li>Publications</li>
+    </ul>
+
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="content">
+
+    <!-- CARD 1 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="images/Sourceofmigrants.png" alt="">
+        </div>
+        <div class="card-back">
+          <p><b>Urban Migrants in China</b><br>
+          Study of informal economies and migrant survival strategies.</p>
+          <a href="https://dspace-prod.anu.edu.au/items/10401add-741c-4161-8f00-aea775ca86fd">View Article</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="images/Nightmarket.jpg" alt="">
+        </div>
+        <div class="card-back">
+          <p><b>Urban Governance</b><br>
+          Examining informal markets and state legitimacy.</p>
+          <a href="#">View Article</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="images/TransFromVillageToCity.png" alt="">
+        </div>
+        <div class="card-back">
+          <p><b>Urbanisation Translation</b><br>
+          Translation work on China's rural–urban transformation.</p>
+          <a href="#">View Article</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="images/ChenLiangLib.jpeg" alt="">
+        </div>
+        <div class="card-back">
+          <p><b>Botswana Cultural Heritage</b><br>
+          Youth, tradition, and museum practices in Africa.</p>
+          <a href="#">View Article</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="images/GewaneSunrise.jpeg" alt="">
+        </div>
+        <div class="card-back">
+          <p><b>Aksumite Civilisation</b><br>
+          Historical transformations in African societies.</p>
+          <a href="#">View Chapter</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="images/ChenLiangLib.jpeg" alt="">
+        </div>
+        <div class="card-back">
+          <p><b>Public Anthropology</b><br>
+          Media writings on migration and global change.</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
