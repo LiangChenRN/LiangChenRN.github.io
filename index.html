@@ -20,7 +20,7 @@ body {
   width: 100%;
   background: #f2e8d5;
   padding: 15px 40px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: none;
   z-index: 1000;
   padding-left: 12%;
 
@@ -40,12 +40,14 @@ body {
   color: #444;
   font-size: 18px;
   font-weight: 500;
+  position: relative;
+  top: 8px;
   
-  background: #e6dcc8;            /* ✅ add */
-  padding: 10px 20px;             /* ✅ add */
-  border: 1px solid #ccc;         /* ✅ add */
-  border-bottom: none;            /* ✅ important for tab look */
-  border-radius: 8px 8px 0 0;     /* ✅ THIS is what you want */
+  background: #e6dcc8;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  border-radius: 8px 8px 0 0;
 }
   
 .navbar a:hover {
