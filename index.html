@@ -12,6 +12,28 @@ body {
   display: flex;
 }
 
+  .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  padding: 15px 40px;
+  border-bottom: 1px solid #ccc;
+  z-index: 1000;
+}
+
+.navbar a {
+  margin-right: 25px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #1565c0;
+}
+  
 /* LEFT SIDE */
 .sidebar {
   width: 25%;
@@ -121,34 +143,12 @@ body {
 <body>
 
 <div class="navbar">
-  Home
-  research.html">Research</a>
-  cv.html">CV</a>
-  fieldwork.html">Fieldwork</a>
-  life.html">Life & Practice</a>
+  index.htmlHome</a>
+  research.htmlResearch</a>
+  cv.htmlCV</a>
+  fieldwork.htmlFieldwork</a>
+  life.htmlLife & Practice</a>
 </div>
-
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: white;
-  padding: 15px 40px;
-  border-bottom: 1px solid #ccc;
-  z-index: 1000;
-}
-
-.navbar a {
-  margin-right: 25px;
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-
-.navbar a:hover {
-  color: #1565c0;
-}
 
 <div class="sidebar">
   <img src="images/ChenLiangLib.jpeg" alt="Profile photo">
