@@ -18,14 +18,27 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: #f2e8d5;   /* soft academic color */
+  background: #f2e8d5;
   padding: 15px 40px;
   border-bottom: 1px solid #ccc;
   z-index: 1000;
   padding-left: 12%;
 
-  font-family: "Cascadia Code SemiBold", monospace;
-  font-weight: 600
+  display: flex;            /* ✅ put everything on one line */
+  align-items: center;      /* ✅ vertical alignment */
+  font-family: "Cascadia Code", monospace;
+  font-weight: 600;
+}
+
+/* move Research to 25% */
+.nav-group {
+  margin-left: 25%;
+}
+
+/* spacing */
+.navbar a {
+  margin-right: 35px;
+  text-decoration: none;
 }
 
 /* LINKS (TABS) */
@@ -167,15 +180,17 @@ body {
 <body>
 
 <div class="navbar">
-
-  <a href="index.html" class="home">Home</a>
-
+ 
+  index.html" class="home">Home</a>
+  
   <div class="nav-group">
-    <a href="research.html">Research</a>
-    <a href="cv.html">CV</a>
-    <a href="fieldwork.html">Fieldwork</a>
-    <a href="life.html">Life & Practice</a>
+    research.html">Research</a>
+    cv.html">CV</a>
+    fieldwork.html">Fieldwork</a>
+    life.html">Life & Practice</a>
   </div>
+
+</div>
 
 </div>
 
